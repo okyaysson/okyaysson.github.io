@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okyaysson | Indie Game Developer</title>
+    <style>
+        body {
+            /* İstediğin fontlar: Avenir Next varsa onu, yoksa Helvetica'yı kullanır */
+            font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 5px;
+            font-weight: 700; /* Bold başlık */
+            letter-spacing: -1px;
+        }
+        .subtitle {
+            font-size: 1.3rem;
+            color: #86868b;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .description {
+            font-size: 1.1rem;
+            color: #1d1d1f;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 300px;
+        }
+        .btn {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: transform 0.2s, opacity 0.2s;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+        /* DON'T OUCH için özel Siyah Buton */
+        .btn-black {
+            background-color: #000000;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        /* Genel App Store butonu Mavi */
+        .btn-blue {
+            background-color: #007aff;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,122,255,0.3);
+        }
+        .footer-note {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #86868b;
+            background-color: #e5e5ea;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>YAYOK MINIS</h1>
+    
+    <div class="subtitle">Indie Solo Studio</div>
+    <div class="subtitle">Hypercasual & Arcade Enthusiast</div>
+    
+    <p class="description">
+        I create fun and addictive experiences. <br>
+        Check out my games on the App Store!
+    </p>
+
+    <div class="btn-container">
+        <a href="https://apps.apple.com/tr/app/dont-ouch-ball-survival/id6755955532?l=tr" class="btn btn-black">
+            🔴 Play "DON'T OUCH!" Now
+        </a>
+
+        <a href="https://apps.apple.com/developer/id123456789" class="btn btn-blue">
+            Visit My App Store Page
+        </a>
+    </div>
+
+    <div class="footer-note">
+        🚀 New games coming in December
+    </div>
+
+</body>
+</html>

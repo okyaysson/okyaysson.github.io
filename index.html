@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Okyaysson | Indie Game Developer</title>
+    <title>YAYOK MINIS | Indie Game Developer</title>
     <style>
         body {
-            /* İstediğin fontlar: Avenir Next varsa onu, yoksa Helvetica'yı kullanır */
             font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #f5f5f7;
-            color: #1d1d1f;
+            /* Siyah ve hafif degrade arka plan */
+            background: radial-gradient(circle at center, #1c1c1e 0%, #000000 100%);
+            color: #f5f5f7; /* Yazılar artık açık renk */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -22,20 +22,22 @@
         h1 {
             font-size: 3rem;
             margin-bottom: 5px;
-            font-weight: 700; /* Bold başlık */
+            font-weight: 700;
             letter-spacing: -1px;
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(255,255,255,0.1);
         }
         .subtitle {
             font-size: 1.3rem;
-            color: #86868b;
+            color: #a1a1a6; /* Apple tarzı açık gri */
             font-weight: 500;
             margin-bottom: 5px;
         }
         .description {
             font-size: 1.1rem;
-            color: #1d1d1f;
+            color: #d2d2d7;
             margin-top: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             max-width: 600px;
             line-height: 1.5;
         }
@@ -44,68 +46,77 @@
             flex-direction: column;
             gap: 15px;
             width: 100%;
-            max-width: 300px;
+            max-width: 320px;
         }
-        .btn {
-            display: block;
-            padding: 15px;
+        /* Beyaz Buton (Siyah zemin üzerinde patlaması için) */
+        .btn-white {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 18px;
             text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            transition: transform 0.2s, opacity 0.2s;
-            font-size: 1rem;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
-        .btn:hover {
-            transform: scale(1.02);
-            opacity: 0.9;
-        }
-        /* DON'T OUCH için özel Siyah Buton */
-        .btn-black {
-            background-color: #000000;
-            color: white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        /* Genel App Store butonu Mavi */
-        .btn-blue {
-            background-color: #007aff;
-            color: white;
-            box-shadow: 0 4px 12px rgba(0,122,255,0.3);
+        .btn-white:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+            background-color: #f2f2f7;
         }
         .footer-note {
-            margin-top: 50px;
+            margin-top: 60px;
             font-size: 0.9rem;
             color: #86868b;
-            background-color: #e5e5ea;
+            background-color: rgba(255, 255, 255, 0.1); /* Yarı saydam arka plan */
             padding: 8px 16px;
             border-radius: 20px;
             font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+        .contact {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #6e6e73;
+        }
+        .contact a {
+            color: #86868b;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact a:hover {
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
 
-    <h1>YAYOK MINIS</h1>
+    <h1>Yayok Minis</h1>
     
     <div class="subtitle">Indie Solo Studio</div>
     <div class="subtitle">Hypercasual & Arcade Enthusiast</div>
     
     <p class="description">
-        I create fun and addictive experiences. <br>
-        Check out my games on the App Store!
+        I create fun and addictive experiences.
     </p>
 
     <div class="btn-container">
-        <a href="https://apps.apple.com/tr/app/dont-ouch-ball-survival/id6755955532?l=tr" class="btn btn-black">
-            🔴 Play "DON'T OUCH!" Now
-        </a>
-
-        <a href="https://apps.apple.com/developer/id123456789" class="btn btn-blue">
-            Visit My App Store Page
+        <a href="https://apps.apple.com/tr/app/dont-ouch-ball-survival/id6755955532?l=tr" class="btn-white">
+            🔴 Play "DON'T OUCH!"
         </a>
     </div>
 
     <div class="footer-note">
         🚀 New games coming in December
+    </div>
+
+    <div class="contact">
+        Contact: <a href="mailto:halilokyay0@gmail.com">halilokyay0@gmail.com</a>
     </div>
 
 </body>

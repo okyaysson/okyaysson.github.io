@@ -1,94 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YAYOK MINIS | Indie Game Developer</title>
+    <title>Halil Okyay | Indie Game Developer</title>
     <style>
         body {
+            /* Font Ayarları */
             font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            /* Siyah ve hafif degrade arka plan */
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            
+            /* Karanlık, şık Apple tarzı arka plan */
             background: radial-gradient(circle at center, #1c1c1e 0%, #000000 100%);
-            color: #f5f5f7; /* Yazılar artık açık renk */
+            color: #f5f5f7;
+            
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            margin: 0;
             text-align: center;
-            padding: 20px;
         }
+
         h1 {
             font-size: 3rem;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            margin-top: 0;
             font-weight: 700;
             letter-spacing: -1px;
             color: #ffffff;
             text-shadow: 0 0 20px rgba(255,255,255,0.1);
         }
+
         .subtitle {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             color: #a1a1a6; /* Apple tarzı açık gri */
             font-weight: 500;
-            margin-bottom: 5px;
-        }
-        .description {
-            font-size: 1.1rem;
-            color: #d2d2d7;
-            margin-top: 20px;
             margin-bottom: 40px;
-            max-width: 600px;
-            line-height: 1.5;
         }
+
         .btn-container {
             display: flex;
             flex-direction: column;
             gap: 15px;
             width: 100%;
-            max-width: 320px;
+            max-width: 340px; /* Genişlik biraz artırıldı */
+            padding: 0 20px;
+            box-sizing: border-box;
         }
-        /* Beyaz Buton (Siyah zemin üzerinde patlaması için) */
+
+        /* Beyaz Buton Tasarımı */
         .btn-white {
+            display: block;
             background-color: #ffffff;
             color: #000000;
             padding: 18px;
             text-decoration: none;
             border-radius: 14px;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
+
         .btn-white:hover {
-            transform: scale(1.03);
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+            transform: scale(1.02);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
             background-color: #f2f2f7;
         }
-        .footer-note {
-            margin-top: 60px;
-            font-size: 0.9rem;
-            color: #86868b;
-            background-color: rgba(255, 255, 255, 0.1); /* Yarı saydam arka plan */
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
-        }
+
         .contact {
-            margin-top: 20px;
+            margin-top: 60px;
             font-size: 0.9rem;
             color: #6e6e73;
         }
+
         .contact a {
             color: #86868b;
             text-decoration: none;
             transition: color 0.2s;
         }
+
         .contact a:hover {
             color: #ffffff;
         }
@@ -96,23 +89,22 @@
 </head>
 <body>
 
-    <h1>Yayok Minis</h1>
-    
+    <h1>Halil Okyay</h1>
+
     <div class="subtitle">Indie Solo Studio</div>
-    <div class="subtitle">Hypercasual & Arcade Enthusiast</div>
-    
-    <p class="description">
-        I create fun and addictive experiences.
-    </p>
 
     <div class="btn-container">
         <a href="https://apps.apple.com/tr/app/dont-ouch-ball-survival/id6755955532?l=tr" class="btn-white">
             🔴 Play "DON'T OUCH!"
         </a>
-    </div>
 
-    <div class="footer-note">
-        🚀 New games coming in December
+        <a href="https://apps.apple.com/tr/app/lucky-block-dice-puzzle/id6756896046?l=tr" class="btn-white">
+            🎲 Play "Lucky Block"
+        </a>
+
+        <a href="https://apps.apple.com/tr/app/updown-boy-deve-c%C3%BCce/id6756816507?l=tr" class="btn-white">
+            ↕️ Play "Updown Boy"
+        </a>
     </div>
 
     <div class="contact">

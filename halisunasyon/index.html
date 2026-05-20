@@ -291,23 +291,29 @@
             position: relative;
             overflow: hidden;
         }
-        .visit-map img {
-            width: 100%;
+
+        /* Slideshow */
+        .slide-track {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            animation: slideLoop 4.5s steps(1) infinite;
+        }
+        @keyframes slideLoop {
+            0%        { transform: translateX(0); }
+            33.333%   { transform: translateX(-33.333%); }
+            66.666%   { transform: translateX(-66.666%); }
+            100%      { transform: translateX(0); }
+        }
+        .slide-track img {
+            width: 33.333%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.6;
+            flex-shrink: 0;
+            animation: crossfade 4.5s ease-in-out infinite;
         }
-        .visit-map-pin {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 14px;
-            height: 14px;
-            background: var(--matcha);
-            border-radius: 50%;
-            box-shadow: 0 0 0 6px rgba(122,156,114,0.25);
-        }
+        .slide-track img:nth-child(2) { animation-delay: -1.5s; }
+        .slide-track img:nth-child(3) { animation-delay: -3s; }
 
         .visit-info .label {
             font-size: 0.7rem;
@@ -621,8 +627,11 @@
 
     <section class="visit">
         <div class="visit-map">
-<img src="mekan-gorseli.jpg" alt="Halisünasyon Coffee Adres">
-            <div class="visit-map-pin"></div>
+            <div class="slide-track">
+                <img src="ortam1.png" alt="Ortam 1">
+                <img src="ortam2.png" alt="Ortam 2">
+                <img src="ortam3.png" alt="Ortam 3">
+            </div>
         </div>
         <div class="visit-info">
             <h2>Bomonti'de buluşalım.</h2>
@@ -697,7 +706,7 @@
             });
         }, { threshold: 0.12 });
 
-        document.querySelectorAll('.visit-map, .visit-info').forEach(el => {
+        document.querySelectorAll('.visit-info').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(28px)';
             el.style.transition = 'opacity 0.9s ease, transform 0.9s ease';
@@ -718,6 +727,44 @@
                     body.classList.remove('intro-active');
                 }, { once: true });
             }, 2300); // Ekrandan kaybolma süresi
+        })();
+
+        // ─── SLIDESHOW ───
+        (function() {
+            const imgs = document.querySelectorAll('.slide-track img');
+            let current = 0;
+            const total = imgs.length;
+
+            function showSlide(i) {
+                imgs.forEach((img, idx) => {
+                    img.style.transition = 'opacity 0.8s ease';
+                    img.style.opacity = idx === i ? '1' : '0';
+                    img.style.position = idx === i ? 'relative' : 'absolute';
+                });
+            }
+
+            // Restructure to absolute positioning for clean crossfade
+            const track = document.querySelector('.slide-track');
+            if (track) {
+                track.style.animation = 'none';
+                track.style.width = '100%';
+                track.style.position = 'relative';
+                imgs.forEach((img, idx) => {
+                    img.style.width = '100%';
+                    img.style.position = 'absolute';
+                    img.style.inset = '0';
+                    img.style.height = '100%';
+                    img.style.opacity = idx === 0 ? '1' : '0';
+                    img.style.transition = 'opacity 0.8s ease';
+                });
+
+                setInterval(() => {
+                    current = (current + 1) % total;
+                    imgs.forEach((img, idx) => {
+                        img.style.opacity = idx === current ? '1' : '0';
+                    });
+                }, 2600);
+            }
         })();
     </script>
 
